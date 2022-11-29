@@ -19,9 +19,7 @@ document.body.style.background = bgColor;
 random_bg_color();
 
 /*Using the children method and a for ... of loop, display every children elements of the second child element of your document (display all children elements of the <body>)*/
-function appel(child)
-{	alert(child.tagName);
-for ( var n=0; n<child.childNodes.length; n++ )
-{	appel(child.childNodes[n]);	}
-}
-console.log(document.getElementsByTagName('body')[0]);
+const myElement = document.body;
+    for(const child of myElement.children) {
+        console.log(document.getElementsByTagName('body')[0]);
+    }
