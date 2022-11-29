@@ -25,3 +25,23 @@ for (let elem of p){
         console.log(elem.innerText);
     }
 }
+
+/*Give each of the paragraph a random text color (different for each one) UNLESS it has a class then leave it as it is.*/
+
+function random_p_color() {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var pColor = "rgb(" + x + "," + y + "," + z + ")";
+    return pColor;
+}
+let parColor = document.querySelectorAll('p');
+
+for(elem of parColor) {
+    if (elem.classList.contains(elem.className)){
+        elem.style.color = 'black';
+    }
+    else {
+        elem.style.color = random_p_color();
+    }
+}
