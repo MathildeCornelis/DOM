@@ -14,3 +14,14 @@ for(let elem of img){
     }
 }
 
+/*Loop through all the paragraphs and display their content in the console. If the paragraph has a class, display its classname as well*/
+const p = document.querySelectorAll('p');
+for (let elem of p){
+    if (elem.classList.contains(elem.className)){
+        console.log(elem.className);
+        console.log(elem.innerText);
+    }
+    else {
+        console.log(elem.innerText);
+    }
+}
